@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/AboutLayout.astro
+layout: ../layouts/BooksLayout.astro
 title: "Books"
 ---
 
