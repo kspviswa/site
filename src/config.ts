@@ -1,10 +1,10 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://kspviswa.github.io/",
+  website: "https://reachmeviz.pages.dev/",
   author: "Viz",
   desc: "My rumblings about telecom, software development and debugging",
-  title: "Engineering with Viz",
+  title: "Viz Dev Cave",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 5,

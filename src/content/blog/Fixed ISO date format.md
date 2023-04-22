@@ -2,7 +2,7 @@
 author: Viz
 pubDatetime: 2023-04-18T00:26:48
 title: Fixed ISO date format
-featured: true
+featured: false
 description: Fixed ISO date format
 draft: false
 tags:
