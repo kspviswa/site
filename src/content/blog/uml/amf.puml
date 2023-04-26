@@ -1,6 +1,7 @@
 @startuml
 skinparam handwritten true
-!theme sketchy
+scale 2.5
+'!theme sketchy
 !define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
 !include osaPuml/Common.puml
 !include osaPuml/User/all.puml
@@ -11,22 +12,26 @@ skinparam handwritten true
 
 node "User Equipment\n<$osa_iPhone>" as ue
 node "gNodeB\n<$osa_wireless_network>" as ran
+together{
 node "Access & Mobility Function\n<$osa_firewall>" as amf
 node "Session Management Function\n<$osa_ics_drive>" as smf
 node "User Data Management\n<$osa_database>" as udm
 node "Policy Control Function\n<$osa_contract>" as pcf
 node "Authentication Server Function\n<$osa_id_card>" as ausf
 node "Location Management Function\n<$osa_camera_web>" as lmf
+}
 node "User Plane Function\n<$osa_hub>" as upf
+node "Data Network\n<$osa_cloud>" as dn
 
-ue <-> ran
-ran <-> amf
-ue <-> amf
-amf <--> smf
-amf <--> pcf
-amf <--> udm
-amf <--> ausf
-amf <--> lmf
-smf <--> upf
-ran <--> upf
+ue <-> ran : nas
+ran <-> amf : ngap
+ran <-> upf : N3 \nUserplane traffic
+ue <.> amf : N2 \nControlplane traffic
+amf <--> smf : session info
+amf <--> pcf : policy info
+amf <--> udm : subscription info
+amf <--> ausf : authentication keys
+amf <--> lmf : location info
+smf <--> upf : PDU session rules
+upf <-> dn : N6
 @enduml
