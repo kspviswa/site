@@ -1,0 +1,32 @@
+@startuml
+skinparam handwritten true
+!theme sketchy
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+node "User Equipment\n<$osa_iPhone>" as ue
+node "gNodeB\n<$osa_wireless_network>" as ran
+node "Access & Mobility Function\n<$osa_firewall>" as amf
+node "Session Management Function\n<$osa_ics_drive>" as smf
+node "User Data Management\n<$osa_database>" as udm
+node "Policy Control Function\n<$osa_contract>" as pcf
+node "Authentication Server Function\n<$osa_id_card>" as ausf
+node "Location Management Function\n<$osa_camera_web>" as lmf
+node "User Plane Function\n<$osa_hub>" as upf
+
+ue <-> ran
+ran <-> amf
+ue <-> amf
+amf <--> smf
+amf <--> pcf
+amf <--> udm
+amf <--> ausf
+amf <--> lmf
+smf <--> upf
+ran <--> upf
+@enduml
