@@ -1,7 +1,6 @@
 @startuml
 skinparam handwritten true
 skinparam ranksep 50
-scale 2.5
 '!theme sketchy
 !define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
 !include osaPuml/Common.puml
