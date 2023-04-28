@@ -1,7 +1,7 @@
 ---
 author: Viz
 pubDatetime: 2023-04-27T21:41:46
-title: Do you want to run a 5G network in Apple Silicon 🖥️ ?
+title: Do you want to run a 5G network in Apple Silicon?
 featured: true
 description: Read this post if you are considering to run a 5G network in your home lab powered by Apple Silicon
 draft: false
