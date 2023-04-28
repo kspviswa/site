@@ -2,7 +2,7 @@
 author: Viz
 pubDatetime: 2023-04-22T16:53:27
 title: Nuances of `this` keyword
-featured: true
+featured: false
 description: How the meaning of `this` keyword changes w.r.t its scope in Javascript
 draft: false
 tags:
