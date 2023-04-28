@@ -34,7 +34,7 @@ I tried both approach and here are my observations
 ILL (Illegal Instruction Set) Error.
 ```
 
-2. Next I tried with Linux ARM within Apple Silicon and this is what worked for me
+2. Next I tried with Linux ARM within Apple Silicon and after lot of trial & errors, this is what worked for me
 		a. First, install Ubuntu 22.1 ARM based instance as a VM
 		b. Next, install Mongo DB by adding the APT source
 		c. Latest Mongo DB will fail with `libssl1.1` dependency and the great gurus of Ubuntu stopped supporting `libssl1.1` and moved to `libssl3` in Ubuntu, where Mongo DB requires `libssl1.1` . This is one of those Face Palm moments 🙈 in Opensource based ecosystems. You don't know when & how the dependencies change and there is absolutely no trace. Here is where RH, Suse & Canonicals of the world will thrive since they do all required heavy lifting for the enterprise & telcos. Okay back to this topic...
