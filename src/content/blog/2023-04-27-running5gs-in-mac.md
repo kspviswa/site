@@ -39,8 +39,12 @@ ILL (Illegal Instruction Set) Error.
 	1. First, install Ubuntu 22.1 ARM based instance as a VM
 	2. Next, install Mongo DB by adding the APT source
 		1. Latest Mongo DB will fail with `libssl1.1` dependency and the great gurus of Ubuntu stopped supporting `libssl1.1` and moved to `libssl3` in Ubuntu, where Mongo DB requires `libssl1.1` . This is one of those Face Palm moments 🙈 in Opensource based ecosystems. You don't know when & how the dependencies change and there is absolutely no trace. Here is where RH, Suse & Canonicals of the world will thrive since they do all required heavy lifting for the enterprise & telcos. Okay back to this topic...
-		2. Nevertheless some good opensource souls 👼🏻 have provided the arm64 port of `libssl1.1.so` here: [http://ports.ubuntu.com/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_arm64.deb](http://ports.ubuntu.com/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_arm64.deb) .
+		2. Nevertheless some good opensource souls 👼🏻 have provided the arm64 port of `libssl1.1.so` here[^1] .
 		3. Install that. Then Mongo DB will install without any errors.
-	3. Okay so the next stop is installing **Open5GS** package in Ubuntu. This should be faily simple since **Open5GS** is available as part of standard `apt get` right? Well not easy.. If you try to check [here](https://launchpad.net/~open5gs/+archive/ubuntu/latest/+packages), you will only see `amd64` packages. So this leaves us with the only option of building from source as noted in https://open5gs.org/open5gs/docs/guide/02-building-open5gs-from-sources/. However this step worked like a charm without any hiccups
+	3. Okay so the next stop is installing **Open5GS** package in Ubuntu. This should be faily simple since **Open5GS** is available as part of standard `apt get` right? Well not easy.. If you try to check [here](https://launchpad.net/~open5gs/+archive/ubuntu/latest/+packages), you will only see `amd64` packages. So this leaves us with the only option of building from source as noted in here[^2]. However this step worked like a charm without any hiccups
 
 Now I will go-ahead with UERANSIM on Linux ARM on Apple Silicon. Lets see how this goes. Stay tuned !
+
+#### References
+[^1]: http://ports.ubuntu.com/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_arm64.deb 
+[^2]: https://open5gs.org/open5gs/docs/guide/02-building-open5gs-from-sources/  
